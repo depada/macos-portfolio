@@ -38,96 +38,107 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "Portfolio",
     icon: "finder.png",
     canOpen: true,
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "SAP Case Studies",
     icon: "safari.png",
     canOpen: true,
   },
   {
     id: "contact",
-    name: "Contact", // or "Get in touch"
+    name: "Contact",
     icon: "contact.png",
     canOpen: true,
   },
   {
     id: "terminal",
-    name: "Skills", // was "Terminal"
+    name: "SAP Skills",
     icon: "terminal.png",
     canOpen: true,
   },
   {
     id: "trash",
-    name: "Archive", // was "Trash"
+    name: "Archive",
     icon: "trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
 const blogPosts = [
   {
     id: 1,
-    date: "Mar 2026",
-    title: "Archy AI — AI Architectural Visualization SaaS",
+    date: "SAP BTP • Managed RAP",
+    title: "Purchase Requisition Approval Application",
     image: "/images/blog1.png",
-    link: "https://archy-ai.vercel.app/",
+    link: "#",
   },
   {
     id: 2,
-    date: "Jan 2025",
-    title: "Zentry-Inspired Interactive Website",
+    date: "ABAP on HANA • CDS • ALV",
+    title: "Sales Order Exception Monitoring Dashboard",
     image: "/images/blog2.png",
-    link: "https://gaming-awards.vercel.app/",
+    link: "#",
   },
   {
     id: 3,
-    date: "Dec 2024",
-    title: "Xora — Modern UI/UX SaaS Website",
+    date: "SAP Integration Suite • CPI",
+    title: "SAP Order Integration and Reprocessing Flow",
     image: "/images/blog3.png",
-    link: "https://saas-landing-page-tau-seven.vercel.app/",
+    link: "#",
   },
   {
     id: 4,
-    date: "Oct 2024",
-    title: "Patient Management Application",
+    date: "ABAP Performance Tuning",
+    title: "High-Volume Sales Order Performance Optimization",
     image: "/images/blog1.png",
-    link: "https://pms-sable.vercel.app/",
+    link: "#",
   },
 ];
 
 const techStack = [
   {
-    category: "Backend",
+    category: "SAP Development",
     items: [
-      "Java",
-      "Spring Boot",
-      "Microservices",
-      "REST APIs",
-      "Production Support",
+      "ABAP",
+      "OO ABAP",
+      "ABAP on HANA",
+      "Modern ABAP Syntax",
+      "Open SQL",
     ],
   },
   {
-    category: "Data & Messaging",
-    items: ["SQL", "PostgreSQL", "MySQL"],
+    category: "S/4HANA Development",
+    items: [
+      "CDS Views",
+      "Managed RAP",
+      "OData V2/V4",
+      "SAP Gateway",
+      "Fiori Elements",
+    ],
   },
   {
-    category: "Cloud & DevOps",
-    items: ["Docker", "Maven", "CI/CD", "Performance Optimization"],
+    category: "Interfaces & Integration",
+    items: ["BAPI", "RFC", "IDoc/ALE", "SAP AIF", "CPI Monitoring"],
   },
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    category: "Enhancements & Forms",
+    items: [
+      "BAdI",
+      "User & Customer Exits",
+      "Enhancement Framework",
+      "Adobe Forms",
+      "Smart Forms",
+    ],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Debugging", "Incident Resolution"],
+    category: "Performance & Support",
+    items: ["ST05", "SAT", "ATC & SCI", "ABAP Debugger", "Production Support"],
   },
 ];
-
 const socials = [
   {
     id: 1,
@@ -226,7 +237,7 @@ const WORK_LOCATION = {
   children: [
     {
       id: 5,
-      name: "Accenture — Associate Software Engineer",
+      name: "Accenture — SAP ABAP on HANA Developer",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
@@ -234,18 +245,19 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "accenture-experience.txt",
+          name: "accenture-sap-experience.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
-          subtitle: "Associate Software Engineer • Hyderabad • 1.5 years",
+          subtitle:
+            "Associate Software Engineer • SAP ABAP on HANA Developer • Hyderabad",
           description: [
-            "Led JDK 8 to 11 upgrade and backend migrations across 5 modules and 14 services; deprecated ~30% legacy APIs, standardized Maven/Docker/CI, doubled deployment frequency, and improved release success from 92% to 99.3%.",
-            "Designed custom annotations for validation, logging, and error handling; adopted across services, reducing boilerplate by ~1,100 LOC (24%) and duplicate defects by 28%.",
-            "Optimized high-traffic APIs: reduced p50 latency by 50% and p95 by 43%, scaled peak throughput 2.2x, and lowered infrastructure cost per request by 17%.",
-            "Engineered a release-validation tool that cut manual checks by 75% (45m to 11m) and increased pre-rollout defect detection by 35%; adopted by 3 teams in 2 sprints.",
-            "Resolved 40+ P2/P3 incidents, reduced MTTR by 46% (2.4h to 1.3h), authored 12 runbooks, and mentored 4 engineers to unblock 8 inter-team deliveries.",
+            "Delivered 22 SAP technical objects for an S/4HANA greenfield implementation, including ALV reports, CDS Views, managed RAP services, OData services, RFC/BAPI interfaces, IDoc interfaces, enhancements and forms; 21 objects were accepted without UAT rework.",
+            "Developed 8 CDS Views, 2 managed RAP services exposed through OData V4 and 2 SEGW-based OData V2 services supporting 3 SAP Fiori applications, reducing average data-retrieval time by 32%.",
+            "Integrated SAP with internal and external applications through RFC/BAPI, IDoc and OData, maintaining more than 98% successful processing across approximately 12,000 business records per day.",
+            "Automated 5 SAP SD/MM business validations using BAdIs, exits and the Enhancement Framework, saving 24 manual user-hours per month and reducing data-correction requests by 27%.",
+            "Optimized 9 custom programs, resolved 42 production and hypercare incidents and supported 12 transport cycles, reducing average report runtime by 40% and mean incident resolution time by 34%.",
           ],
         },
       ],
@@ -267,13 +279,13 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "txt",
       position: "top-10 left-5",
-      subtitle: "Backend-focused Software Engineer",
+      subtitle: "SAP ABAP on HANA Developer • S/4HANA Technical Consultant",
       description: [
-        "I'm Pavan Kolipaka, a backend-focused software engineer with 1.5 years of experience building Java and Spring Boot microservices, production-grade APIs, and SQL-backed systems.",
-        "At Accenture, I led JDK 8 to 11 upgrades and backend migrations across 5 modules and 14 services, improving release success from 92% to 99.3%.",
-        "I designed reusable validation, logging, and error-handling annotations to reduce boilerplate and improve service reliability at scale.",
-        "I specialize in API performance tuning, debugging production incidents, and cloud-ready microservice delivery with strong operational ownership.",
-        "Alongside backend engineering, I also build polished frontend experiences with React.js and Next.js, enabling effective end-to-end product delivery.",
+        "I'm Pavan Kolipaka, an SAP ABAP on HANA Developer with 2 years of experience delivering technical solutions for an S/4HANA greenfield implementation.",
+        "My experience covers RICEFW development, OO ABAP, CDS Views, managed RAP, OData services, interfaces, enhancements, forms, performance tuning and production support.",
+        "At Accenture, I delivered 22 SAP technical objects, with 21 accepted without UAT rework through structured technical reviews, ATC checks, developer testing and documented test evidence.",
+        "I specialize in building reliable SAP backend services, optimizing high-volume programs, debugging production issues and integrating SAP through BAPI, RFC, IDoc, OData and SAP AIF.",
+        "I also build portfolio solutions using SAP BTP ABAP Environment, RAP, CDS, Fiori Elements and SAP Integration Suite to strengthen my modern SAP and ABAP Cloud capabilities.",
       ],
     },
   ],

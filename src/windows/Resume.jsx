@@ -1,6 +1,7 @@
 import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { Download } from "lucide-react";
+import { useState } from "react";
 import { Page, pdfjs, Document } from "react-pdf";
 
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -12,6 +13,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 const Resume = () => {
+  const [numPages, setNumPages] = useState(null);
+
   return (
     <>
       <div id="window-header">
@@ -27,9 +30,23 @@ const Resume = () => {
           <Download className="icon" />
         </a>
       </div>
-      <Document file="files/resume.pdf">
-        <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
-      </Document>
+
+      <div className="pdf-scroll">
+        <Document
+          file="files/resume.pdf"
+          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+        >
+          {Array.from({ length: numPages ?? 0 }, (_, index) => (
+            <Page
+              key={`resume-page-${index + 1}`}
+              pageNumber={index + 1}
+              renderTextLayer
+              renderAnnotationLayer
+              width={620}
+            />
+          ))}
+        </Document>
+      </div>
     </>
   );
 };

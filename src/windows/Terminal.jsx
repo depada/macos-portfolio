@@ -18,28 +18,28 @@ const Terminal = () => {
         </p>
 
         <div className="label">
-          <p className="w-32">Category</p>
+          <p className="category-label">Category</p>
           <p>Technologies</p>
         </div>
 
-        <ul className="content">
+        <div className="content">
           {techStack.map(({ category, items }) => {
             return (
-              <li key={category} className="flex items-center">
-                <Check className="check" size={20} />
-                <h3>{category}</h3>
-                <ul>
-                  {items.map((item, i) => (
-                    <li key={i}>
-                      {item}
-                      {i < items.length - 1 ? "," : ""}
-                    </li>
+              <div key={category} className="row">
+                <div className="row-title">
+                  <Check className="check" size={20} />
+                  <h3>{category}</h3>
+                </div>
+
+                <ul className="tech-items">
+                  {items.map((item) => (
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
 
         <div className="footnote">
           <p>
